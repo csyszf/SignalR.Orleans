@@ -21,23 +21,24 @@
     <PropertyGroup>
         <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
         <NoWarn>$(NoWarn);1701;1702;1705;1591</NoWarn>
-        <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+        <!--<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>-->
         <LangVersion>latest</LangVersion>
     </PropertyGroup>
 
     <PropertyGroup>
-        <TargetFramework>netstandard2.0</TargetFramework>
+        <TargetFramework>net5.0</TargetFramework>
     </PropertyGroup>
 
     <!-- Shared Package Versions -->
     <PropertyGroup>
         <!-- vendors -->
-        <OrleansCoreVersion>3.0.0</OrleansCoreVersion>
-        <OrleansProvidersVersion>3.0.0</OrleansProvidersVersion>
-        <OrleansCodeGeneratorVersion>3.0.0</OrleansCodeGeneratorVersion>
-        <OrleansRuntimeAbstractionsVersion>3.0.0</OrleansRuntimeAbstractionsVersion>
-        <OrleansRuntimeVersion>3.0.0</OrleansRuntimeVersion>
-        <SignalRVersion>1.1.0</SignalRVersion>
+        <CoreFXVersion>5.0.0-rc.2.20454.25</CoreFXVersion>
+        <OrleansCoreVersion>3.3.0-rc2</OrleansCoreVersion>
+        <OrleansProvidersVersion>3.3.0-rc2</OrleansProvidersVersion>
+        <OrleansCodeGeneratorVersion>3.3.0-rc2</OrleansCodeGeneratorVersion>
+        <OrleansRuntimeAbstractionsVersion>3.3.0-rc2</OrleansRuntimeAbstractionsVersion>
+        <OrleansRuntimeVersion>3.3.0-rc2</OrleansRuntimeVersion>
+        <SignalRVersion>5.0.0-rc.2.20454.9</SignalRVersion>
     </PropertyGroup>
 
     <ItemGroup>

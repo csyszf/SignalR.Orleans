@@ -13,7 +13,11 @@ namespace SignalR.Orleans.Tests.AspnetSignalR
     {
         public static HubConnectionContext Create(ConnectionContext connection)
         {
-            var ctx = new HubConnectionContext(connection, TimeSpan.FromSeconds(15), NullLoggerFactory.Instance);
+            var options = new HubConnectionContextOptions()
+            {
+                ClientTimeoutInterval = TimeSpan.FromSeconds(15)
+            };
+            var ctx = new HubConnectionContext(connection, options, NullLoggerFactory.Instance);
             var protocolProp = ctx.GetType().GetProperty("Protocol", BindingFlags.Instance |
                                                                      BindingFlags.NonPublic |
                                                                      BindingFlags.Public);
