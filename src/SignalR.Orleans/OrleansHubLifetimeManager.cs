@@ -122,7 +122,7 @@ namespace SignalR.Orleans
                 var client = _clusterClientProvider.GetClient().GetClientGrain(_hubName, connection.ConnectionId);
                 await client.OnConnect(_serverId);
 
-                if (connection.User.Identity.IsAuthenticated)
+                if (connection.UserIdentifier != null)
                 {
                     var user = _clusterClientProvider.GetClient().GetUserGrain(_hubName, connection.UserIdentifier);
                     await user.Add(connection.ConnectionId);
